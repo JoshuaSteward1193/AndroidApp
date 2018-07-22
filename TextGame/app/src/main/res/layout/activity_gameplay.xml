@@ -8,18 +8,44 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="359dp"
+        android:layout_width="match_parent"
         android:layout_height="221dp"
         android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:fontFamily="serif"
         android:text="This is the main text window. All relevant info will be posted here. But what happens when you add more and more and more words? Does it flow correctly? Does the text box grow? We shall see..."
         android:textAlignment="viewStart"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.029"
-        android:layout_marginLeft="8dp"
+        app:layout_constraintHorizontal_bias="0.555"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent" />
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.225" />
+
+    <TextView
+        android:id="@+id/overView"
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:text="Longer Text View"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:typeface="normal"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <Button
+        android:id="@+id/button"
+        style="@android:style/Widget.Holo.Button.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        tools:layout_editor_absoluteX="48dp"
+        tools:layout_editor_absoluteY="380dp" />
 </android.support.constraint.ConstraintLayout>
