@@ -3,6 +3,8 @@ package com.textgame.joshuas.textgame;
 import java.util.ArrayList;
 import java.util.List;
 
+import static java.lang.System.out;
+
 /**
  * Created by Joshua S on 7/21/2018.
  */
@@ -17,6 +19,12 @@ public class Encounter {
         description = d;
     }
     public void AddAction(Action x){
-        actions.add(x);
+        if(actions.size() < 5){
+            actions.add(x);
+        }
+        else {
+            out.println("Too many actions!");
+        }
+
     }
 }
