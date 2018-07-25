@@ -6,7 +6,7 @@ package com.textgame.joshuas.textgame;
 
 public class GameEngine {
     public static void navigate(int i){
-        Encounter currentRoom = GameData.currentLocation;
-        GameData.currentLocation = currentRoom.actions.get(i).destination;
+        GameData.currentLocation.actions.get(i).carryOut();
+
     }
 }

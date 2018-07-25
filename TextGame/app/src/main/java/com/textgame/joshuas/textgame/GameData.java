@@ -28,6 +28,8 @@ public class GameData {
                 "and enter an old hallway.", encounters.get(2)));
         encounters.get(1).AddAction(new Action("Leave the Storage Room", "You leave the dark and musty room " +
                 "behind you and re-enter the Hall of Beginnings.", encounters.get(0)));
+        encounters.get(1).AddAction(new Action("Look for something nice", "You rummage around, but find nothing.",
+                encounters.get(1), 1));
 
         //FINALIZE VARIABLES
         currentLocation = encounters.get(0);

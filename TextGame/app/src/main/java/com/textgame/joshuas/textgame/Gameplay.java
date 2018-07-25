@@ -70,34 +70,52 @@ public class Gameplay extends AppCompatActivity {
 
         switch (GameData.currentLocation.actions.size()){
             case 4:
-                button4.setEnabled(true);
-                button4.setText(GameData.currentLocation.actions.get(3).description);
-                button3.setEnabled(true);
-                button3.setText(GameData.currentLocation.actions.get(2).description);
-                button2.setEnabled(true);
-                button2.setText(GameData.currentLocation.actions.get(1).description);
-                button1.setEnabled(true);
-                button1.setText(GameData.currentLocation.actions.get(0).description);
+                if(GameData.currentLocation.actions.get(3).attempts != 0){
+                    button4.setEnabled(true);
+                    button4.setText(GameData.currentLocation.actions.get(3).description);
+                }
+                if(GameData.currentLocation.actions.get(2).attempts != 0){
+                    button3.setEnabled(true);
+                    button3.setText(GameData.currentLocation.actions.get(2).description);
+                }
+                if(GameData.currentLocation.actions.get(1).attempts != 0){
+                    button2.setEnabled(true);
+                    button2.setText(GameData.currentLocation.actions.get(1).description);
+                }
+                if(GameData.currentLocation.actions.get(0).attempts != 0){
+                    button1.setEnabled(true);
+                    button1.setText(GameData.currentLocation.actions.get(0).description);
+                }
                 break;
             case 3:
                 button4.setEnabled(false);
                 button4.setText("");
-                button3.setEnabled(true);
-                button3.setText(GameData.currentLocation.actions.get(2).description);
-                button2.setEnabled(true);
-                button2.setText(GameData.currentLocation.actions.get(1).description);
-                button1.setEnabled(true);
-                button1.setText(GameData.currentLocation.actions.get(0).description);
+                if(GameData.currentLocation.actions.get(2).attempts != 0){
+                    button3.setEnabled(true);
+                    button3.setText(GameData.currentLocation.actions.get(2).description);
+                }
+                if(GameData.currentLocation.actions.get(1).attempts != 0){
+                    button2.setEnabled(true);
+                    button2.setText(GameData.currentLocation.actions.get(1).description);
+                }
+                if(GameData.currentLocation.actions.get(0).attempts != 0){
+                    button1.setEnabled(true);
+                    button1.setText(GameData.currentLocation.actions.get(0).description);
+                }
                 break;
             case 2:
                 button4.setEnabled(false);
                 button4.setText("");
                 button3.setEnabled(false);
                 button3.setText("");
-                button2.setEnabled(true);
-                button2.setText(GameData.currentLocation.actions.get(1).description);
-                button1.setEnabled(true);
-                button1.setText(GameData.currentLocation.actions.get(0).description);
+                if(GameData.currentLocation.actions.get(1).attempts != 0){
+                    button2.setEnabled(true);
+                    button2.setText(GameData.currentLocation.actions.get(1).description);
+                }
+                if(GameData.currentLocation.actions.get(0).attempts != 0){
+                    button1.setEnabled(true);
+                    button1.setText(GameData.currentLocation.actions.get(0).description);
+                }
                 break;
             case 1:
                 button4.setEnabled(false);
@@ -106,8 +124,10 @@ public class Gameplay extends AppCompatActivity {
                 button3.setText("");
                 button2.setEnabled(false);
                 button2.setText("");
-                button1.setEnabled(true);
-                button1.setText(GameData.currentLocation.actions.get(0).description);
+                if(GameData.currentLocation.actions.get(0).attempts != 0){
+                    button1.setEnabled(true);
+                    button1.setText(GameData.currentLocation.actions.get(0).description);
+                }
                 break;
             default:
                 button4.setEnabled(false);
