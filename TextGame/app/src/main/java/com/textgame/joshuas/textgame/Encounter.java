@@ -19,7 +19,7 @@ public class Encounter {
         description = d;
     }
     public void AddAction(Action x){
-        if(actions.size() < 5){
+        if(actions.size() < 4){
             actions.add(x);
         }
         else {

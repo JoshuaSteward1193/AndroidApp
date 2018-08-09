@@ -7,6 +7,5 @@ package com.textgame.joshuas.textgame;
 public class GameEngine {
     public static void navigate(int i){
         GameData.currentLocation.actions.get(i).carryOut();
-
     }
 }

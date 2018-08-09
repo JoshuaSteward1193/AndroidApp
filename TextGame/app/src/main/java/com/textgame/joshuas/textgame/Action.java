@@ -12,23 +12,38 @@ public class Action {
     //physical location. For example, a conversation could have another conversation as its destination.
     public Encounter destination;
     public int attempts;
+    public boolean active;         //determines if the action should be loaded or not
+    public boolean extinguishable; //determines if an action has limited uses or not
 
     public Action(String des, String act, Encounter loc){
         description = des;
         actionText = act;
         destination = loc;
         attempts = -1;
+        active = true;
+        extinguishable = false;
     }
     public Action(String des, String act, Encounter loc, int amt){
         description = des;
         actionText = act;
         destination = loc;
         attempts = amt;
+        if (attempts > 0){
+            extinguishable = true;
+        } else {
+            extinguishable = false;
+        }
+
     }
     public void carryOut() {
-        if(attempts > 0 ){
-            attempts--;
+        if(active){
+            if(extinguishable){
+                attempts--;
+            }
             GameData.currentLocation = destination;
+        }
+        if(attempts == 0){
+            active = false;
         }
     }
 }

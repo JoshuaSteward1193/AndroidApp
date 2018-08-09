@@ -12,6 +12,9 @@ public class GameData {
     public static List<Encounter> encounters = new ArrayList<>();
 
     public static void BuildData(){
+        if(encounters.size() > 0){
+            encounters.clear();
+        }
         //BUILD ENCOUNTERS
         encounters.add(new Encounter("Hall of Beginnings", "This is a large open hall. Most " +
                 "adentures start here. There is a small storage room here. There is an exit leading out " +
